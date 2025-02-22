@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dr3t3apft0m8b"]
+[gd_scene load_steps=6 format=3 uid="uid://dr3t3apft0m8b"]
 
+[ext_resource type="PackedScene" uid="uid://bp38xuo5lof0i" path="res://chicken.tscn" id="1_8nceo"]
 [ext_resource type="PackedScene" uid="uid://bpvd3mwiifo8g" path="res://player.tscn" id="1_j6ec8"]
 [ext_resource type="PackedScene" uid="uid://d4mvahmoqcyqj" path="res://assets/ocean_surface/ocean_surface.tscn" id="2_qjxlo"]
 
@@ -19,6 +20,198 @@ shape = SubResource("BoxShape3D_1n0b7")
 transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0, -1, 0)
 visible = false
 mesh = SubResource("BoxMesh_gaklo")
+
+[node name="Chicken" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 0, 0)
+
+[node name="Chicken2" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192, 0, 0)
+
+[node name="Chicken3" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, 0, 0)
+
+[node name="Chicken4" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318, 0, 0)
+
+[node name="Chicken5" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 318, 0, 46)
+
+[node name="Chicken6" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 386, 0, 46)
+
+[node name="Chicken7" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 403, 0, 28)
+
+[node name="Chicken8" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 421, 0, 8)
+
+[node name="Chicken9" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 443, 0, -14)
+
+[node name="Chicken10" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 467, 0, -40)
+
+[node name="Chicken11" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 493, 0, -67)
+
+[node name="Chicken12" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 504, 0, -43)
+
+[node name="Chicken13" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 502, 0, -17)
+
+[node name="Chicken14" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 507, 0, 2)
+
+[node name="Chicken15" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 506, 0, 22)
+
+[node name="Chicken16" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 507, 0, 41)
+
+[node name="Chicken17" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 515, 0, 0)
+
+[node name="Chicken18" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 579, 0, 0)
+
+[node name="Chicken19" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 643, 0, 0)
+
+[node name="Chicken20" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 705, 0, 0)
+
+[node name="Chicken21" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 705, 0, 46)
+
+[node name="Chicken22" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 773, 0, 46)
+
+[node name="Chicken23" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 790, 0, 28)
+
+[node name="Chicken24" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 808, 0, 8)
+
+[node name="Chicken25" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 830, 0, -14)
+
+[node name="Chicken26" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, 0, -40)
+
+[node name="Chicken27" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 880, 0, -67)
+
+[node name="Chicken28" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 891, 0, -43)
+
+[node name="Chicken29" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 889, 0, -17)
+
+[node name="Chicken30" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 894, 0, 2)
+
+[node name="Chicken31" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 893, 0, 22)
+
+[node name="Chicken32" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 894, 0, 41)
+
+[node name="Chicken33" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 515, 0, -132)
+
+[node name="Chicken34" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 579, 0, -132)
+
+[node name="Chicken35" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 643, 0, -132)
+
+[node name="Chicken36" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 705, 0, -132)
+
+[node name="Chicken37" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 705, 0, -86)
+
+[node name="Chicken38" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 773, 0, -86)
+
+[node name="Chicken39" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 790, 0, -104)
+
+[node name="Chicken40" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 808, 0, -124)
+
+[node name="Chicken41" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 830, 0, -146)
+
+[node name="Chicken42" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 854, 0, -172)
+
+[node name="Chicken43" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 880, 0, -199)
+
+[node name="Chicken44" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 891, 0, -175)
+
+[node name="Chicken45" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 889, 0, -149)
+
+[node name="Chicken46" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 894, 0, -130)
+
+[node name="Chicken47" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 893, 0, -110)
+
+[node name="Chicken48" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 894, 0, -91)
+
+[node name="Chicken49" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 817, 0, -69)
+
+[node name="Chicken50" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 881, 0, -69)
+
+[node name="Chicken51" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 945, 0, -69)
+
+[node name="Chicken52" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1007, 0, -69)
+
+[node name="Chicken53" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1007, 0, -23)
+
+[node name="Chicken54" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1075, 0, -23)
+
+[node name="Chicken55" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1092, 0, -41)
+
+[node name="Chicken56" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1110, 0, -61)
+
+[node name="Chicken57" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1132, 0, -83)
+
+[node name="Chicken58" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1156, 0, -109)
+
+[node name="Chicken59" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1182, 0, -136)
+
+[node name="Chicken60" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1193, 0, -112)
+
+[node name="Chicken61" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1191, 0, -86)
+
+[node name="Chicken62" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1196, 0, -67)
+
+[node name="Chicken63" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1195, 0, -47)
+
+[node name="Chicken64" parent="Ground" instance=ExtResource("1_8nceo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1196, 0, -28)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 22, 0)

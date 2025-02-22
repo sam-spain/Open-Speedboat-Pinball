@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp38xuo5lof0i"]
+
+[ext_resource type="PackedScene" uid="uid://dsw826drfu8ix" path="res://assets/Meshes/chicken.fbx" id="1_0ic4s"]
+[ext_resource type="Script" path="res://assets/Meshes/Chicken.cs" id="2_tgxc8"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+motion_mode = 1
+script = ExtResource("2_tgxc8")
+
+[node name="Chicken" type="Node3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="chicken" parent="Chicken" instance=ExtResource("1_0ic4s")]
