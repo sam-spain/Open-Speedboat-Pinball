@@ -80,11 +80,19 @@ public partial class Player : CharacterBody3D
 		// Vertical velocity
 		if (!IsOnFloor()) // If in the air, fall towards the floor. Literally gravity
 		{
+			//Print("Falling");
 			_targetVelocity.Y -= FallAcceleration * (float)delta;
+		} else {
+			//Print("On Floor");
 		}
 
 		// Moving the character
 		Velocity = _targetVelocity;
 		MoveAndSlide();
+		//KinematicCollision3D collision = MoveAndCollide(_targetVelocity * (float)delta);
+		//if (collision != null)
+		//{
+		//	Print("Player collided with ", collision.GetCollider());
+		//}
 	}
 }

@@ -1,13 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bp38xuo5lof0i"]
+[gd_scene load_steps=5 format=3 uid="uid://bp38xuo5lof0i"]
 
 [ext_resource type="PackedScene" uid="uid://dsw826drfu8ix" path="res://assets/Meshes/chicken.fbx" id="1_0ic4s"]
 [ext_resource type="Script" path="res://assets/Meshes/Chicken.cs" id="2_tgxc8"]
+[ext_resource type="Script" path="res://scripts/ChickenEnter.cs" id="2_ywht3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ynms"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("2_tgxc8")
 
-[node name="Chicken" type="Node3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("2_ywht3")
 
-[node name="chicken" parent="Chicken" instance=ExtResource("1_0ic4s")]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(6.6, 0, 0, 0, 18.252, 0, 0, 0, 10.488, 0, 8, 0)
+shape = SubResource("BoxShape3D_8ynms")
+
+[node name="chicken" parent="Area3D" instance=ExtResource("1_0ic4s")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)

@@ -16,10 +16,11 @@ public partial class Chicken : CharacterBody3D
 	private Vector3 _targetVelocity = Vector3.Zero;
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		_targetVelocity.X = -1 * Speed;
 		Velocity = _targetVelocity;
 		MoveAndSlide();
 	}
+
 }
