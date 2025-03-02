@@ -22,11 +22,34 @@ public partial class Player : CharacterBody3D
 	[Export]
 	public Node3D targetNode3;
 
+	[Export]
+	public Label healthLabel;
+
+	[Export]
+	public int startingHealth = 100;
+
+	private int currentHealth;
+
 
 	private int currentTargetNode = 1;
 
 	private Vector3 _targetVelocity = Vector3.Zero;
 
+	public override void _Ready()
+	{
+		currentHealth = startingHealth;
+		healthLabel.Text = "Health: " + currentHealth;
+	}
+
+	public void TakeDamage(int damage)
+	{
+		currentHealth -= damage;
+		healthLabel.Text = "Health: " + currentHealth;
+		if (currentHealth <= 0)
+		{
+			GetTree().ChangeSceneToFile("res://scenes/Main_Menu_Scene.tscn");
+		}
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{

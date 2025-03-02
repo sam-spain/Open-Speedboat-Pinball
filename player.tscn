@@ -1,17 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpvd3mwiifo8g"]
+[gd_scene load_steps=5 format=3 uid="uid://bpvd3mwiifo8g"]
 
 [ext_resource type="Script" path="res://Player.cs" id="1_3xi3w"]
 [ext_resource type="ArrayMesh" uid="uid://dqpho5mf4of6g" path="res://assets/Meshes/15211_Wakeboard_v1_NEW.obj" id="2_xwofr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cvt0t"]
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("targetNode1", "targetNode2", "targetNode3")]
+[sub_resource type="LabelSettings" id="LabelSettings_3ifsg"]
+font_size = 200
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("targetNode1", "targetNode2", "targetNode3", "healthLabel")]
 collision_mask = 5
 script = ExtResource("1_3xi3w")
 JumpImpulse = 90
 targetNode1 = NodePath("PlayerSceneBase/MovementSpots/Spot1")
 targetNode2 = NodePath("PlayerSceneBase/MovementSpots/Spot2")
 targetNode3 = NodePath("PlayerSceneBase/MovementSpots/Spot3")
+healthLabel = NodePath("Control/Label")
 
 [node name="Pivot" type="Node3D" parent="."]
 
@@ -34,3 +38,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30)
 
 [node name="Spot3" type="Node3D" parent="PlayerSceneBase/MovementSpots"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Health:"
+label_settings = SubResource("LabelSettings_3ifsg")
