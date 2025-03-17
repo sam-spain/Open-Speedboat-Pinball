@@ -26,10 +26,14 @@ public partial class Player : CharacterBody3D
 	public Label healthLabel;
 
 	[Export]
+	public Label scoreLabel;
+
+	[Export]
 	public int startingHealth = 100;
 
 	private int currentHealth;
 
+	private int currentScore;
 
 	private int currentTargetNode = 1;
 
@@ -49,6 +53,13 @@ public partial class Player : CharacterBody3D
 		{
 			GetTree().ChangeSceneToFile("res://scenes/Main_Menu_Scene.tscn");
 		}
+	}
+
+	public void AddScore(int score)
+	{
+		Print("Player add score");
+		currentScore += score;
+		scoreLabel.Text = "Score: " + currentScore;
 	}
 
 	public override void _PhysicsProcess(double delta)

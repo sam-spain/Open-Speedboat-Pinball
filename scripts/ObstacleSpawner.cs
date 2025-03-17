@@ -25,7 +25,7 @@ public partial class ObstacleSpawner : Node3D
 		spawnInterval -= (float)delta;
 		if(spawnInterval <= 0) {
 			SpawnChicken();
-			spawnInterval = rng.RandfRange(1.0f, 10.0f);
+			spawnInterval = rng.RandfRange(0.1f, 3.0f);
 		}	
 	}
 
