@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dikc0kixxxk4m"]
+
+[ext_resource type="Script" path="res://scripts/HighScorePage.cs" id="1_njlob"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x5bgg"]
+font_size = 100
+
+[node name="Control" type="Control" node_paths=PackedStringArray("highScoreLabel")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_njlob")
+highScoreLabel = NodePath("High Score Label")
+
+[node name="High Score Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "High Score: "
+label_settings = SubResource("LabelSettings_x5bgg")
