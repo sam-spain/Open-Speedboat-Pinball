@@ -16,3 +16,4 @@ mono_crash.*.json
 
 # OS
 .DS_Store
+.vscode/settings.json
