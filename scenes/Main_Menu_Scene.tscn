@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl4n6blo6ebd"]
+[gd_scene load_steps=4 format=3 uid="uid://dl4n6blo6ebd"]
 
 [ext_resource type="Script" path="res://scripts/MainMenuScene.cs" id="1_yee5d"]
+[ext_resource type="Script" path="res://scripts/HighScoresSceneButton.cs" id="2_hqndd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tp6f2"]
 font_size = 100
@@ -13,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yee5d")
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -30,3 +32,13 @@ offset_right = 544.0
 offset_bottom = 235.0
 scale = Vector2(10, 10)
 text = "Play Game"
+
+[node name="High Scores Scene Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 547.0
+offset_right = 515.0
+offset_bottom = 578.0
+scale = Vector2(10, 10)
+text = "High Scores"
+script = ExtResource("2_hqndd")

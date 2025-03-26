@@ -19,3 +19,11 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "High Score: "
 label_settings = SubResource("LabelSettings_x5bgg")
+
+[node name="Back Button" type="Button" parent="."]
+layout_mode = 0
+offset_top = 392.0
+offset_right = 45.0
+offset_bottom = 423.0
+scale = Vector2(10, 10)
+text = "Back"
