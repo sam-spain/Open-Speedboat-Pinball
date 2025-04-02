@@ -52,7 +52,7 @@ public partial class Player : CharacterBody3D
 		if (currentHealth <= 0)
 		{
 			ScoreRepository scoreRepository = new ScoreRepository();
-			scoreRepository.SaveScore(currentScore);
+			scoreRepository.SaveScore(new PlayerScore(currentScore, "Player 1"));
 			GetTree().ChangeSceneToFile("res://scenes/Main_Menu_Scene.tscn");
 		}
 	}

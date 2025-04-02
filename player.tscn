@@ -1,7 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpvd3mwiifo8g"]
+[gd_scene load_steps=8 format=3 uid="uid://bpvd3mwiifo8g"]
 
 [ext_resource type="Script" path="res://Player.cs" id="1_3xi3w"]
+[ext_resource type="Shader" path="res://player.gdshader" id="2_ov080"]
 [ext_resource type="ArrayMesh" uid="uid://dqpho5mf4of6g" path="res://assets/Meshes/15211_Wakeboard_v1_NEW.obj" id="2_xwofr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tynx"]
+render_priority = 0
+shader = ExtResource("2_ov080")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cvt0t"]
 
@@ -25,6 +30,7 @@ scoreLabel = NodePath("Control/ScoreLabel")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
 transform = Transform3D(0.05, 0, 0, 0, -2.18557e-09, 0.05, 0, -0.05, -2.18557e-09, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_7tynx")
 mesh = ExtResource("2_xwofr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

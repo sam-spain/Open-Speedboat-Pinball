@@ -5,19 +5,20 @@
 [sub_resource type="LabelSettings" id="LabelSettings_x5bgg"]
 font_size = 100
 
-[node name="Control" type="Control" node_paths=PackedStringArray("highScoreLabel")]
+[node name="Control" type="Control" node_paths=PackedStringArray("highScoreLabel", "nameInput")]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_njlob")
 highScoreLabel = NodePath("High Score Label")
+nameInput = NodePath("Name Input")
 
 [node name="High Score Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "High Score: "
+text = "High Scores: "
 label_settings = SubResource("LabelSettings_x5bgg")
 
 [node name="Back Button" type="Button" parent="."]
@@ -27,3 +28,20 @@ offset_right = 45.0
 offset_bottom = 423.0
 scale = Vector2(10, 10)
 text = "Back"
+
+[node name="Name Input" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 882.0
+offset_top = 570.0
+offset_right = 949.063
+offset_bottom = 601.0
+scale = Vector2(10, 10)
+
+[node name="Save Score Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 892.0
+offset_right = 1040.0
+offset_bottom = 923.0
+scale = Vector2(5, 5)
+text = "Save"
