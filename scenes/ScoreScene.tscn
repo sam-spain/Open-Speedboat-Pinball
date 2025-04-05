@@ -3,45 +3,67 @@
 [ext_resource type="Script" path="res://scripts/HighScorePage.cs" id="1_njlob"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_x5bgg"]
-font_size = 100
+font_size = 50
 
 [node name="Control" type="Control" node_paths=PackedStringArray("highScoreLabel", "nameInput")]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_njlob")
 highScoreLabel = NodePath("High Score Label")
 nameInput = NodePath("Name Input")
 
 [node name="High Score Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -623.0
+offset_right = -6.0
+offset_bottom = 137.0
+grow_horizontal = 0
 text = "High Scores: "
 label_settings = SubResource("LabelSettings_x5bgg")
 
 [node name="Back Button" type="Button" parent="."]
-layout_mode = 0
-offset_top = 392.0
-offset_right = 45.0
-offset_bottom = 423.0
+layout_mode = 1
+offset_left = -4.0
+offset_top = 3.00003
+offset_right = 41.0
+offset_bottom = 34.0
 scale = Vector2(10, 10)
 text = "Back"
 
 [node name="Name Input" type="LineEdit" parent="."]
-layout_mode = 0
-offset_left = 882.0
-offset_top = 570.0
-offset_right = 949.063
-offset_bottom = 601.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -350.0
+offset_top = -540.0
+offset_right = -282.938
+offset_bottom = -509.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(10, 10)
 
 [node name="Save Score Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 930.0
-offset_top = 892.0
-offset_right = 1040.0
-offset_bottom = 923.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -278.0
+offset_top = -186.0
+offset_right = -168.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(5, 5)
 text = "Save"

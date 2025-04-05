@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb2ab5jidruy4"]
+
+[ext_resource type="Script" path="res://scripts/EndGameScoreScene.cs" id="1_qjj2k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7e7qr"]
+font_size = 200
+
+[node name="EndGameScoreScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qjj2k")
+
+[node name="EndScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -546.5
+offset_right = 546.5
+offset_bottom = 273.0
+grow_horizontal = 2
+text = "Your Score:"
+label_settings = SubResource("LabelSettings_7e7qr")
+
+[node name="SaveButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.0
+offset_top = 432.0
+offset_right = -10.0
+offset_bottom = 463.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+text = "Save"
+
+[node name="PlayerNameEntry" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -114.0
+offset_top = 258.0
+offset_right = -46.9375
+offset_bottom = 289.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+placeholder_text = "Name:"

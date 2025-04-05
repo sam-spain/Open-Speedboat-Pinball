@@ -53,7 +53,8 @@ public partial class Player : CharacterBody3D
 		{
 			ScoreRepository scoreRepository = new ScoreRepository();
 			scoreRepository.SaveScore(new PlayerScore(currentScore, "Player 1"));
-			GetTree().ChangeSceneToFile("res://scenes/Main_Menu_Scene.tscn");
+			CurrentPlayerScoreSingleton.Instance.CurrentScore = currentScore;
+			GetTree().ChangeSceneToFile("res://scenes/End_Game_Score_Scene.tscn");
 		}
 	}
 
