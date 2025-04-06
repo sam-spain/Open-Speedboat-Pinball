@@ -11,7 +11,7 @@ public partial class Player : CharacterBody3D
 	public int FallAcceleration { get; set; } = 150;
 	
 	[Export]
-	public int JumpImpulse { get; set; } = 80;
+	public int JumpImpulse { get; set; } = 110;
 
 	[Export]
 	public Node3D targetNode1;

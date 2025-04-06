@@ -9,6 +9,7 @@ render_priority = 0
 shader = ExtResource("2_ov080")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cvt0t"]
+size = Vector3(0.700546, 0.460266, 0.611938)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ifsg"]
 font_size = 180
@@ -19,7 +20,6 @@ font_size = 180
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("targetNode1", "targetNode2", "targetNode3", "healthLabel", "scoreLabel")]
 collision_mask = 5
 script = ExtResource("1_3xi3w")
-JumpImpulse = 90
 targetNode1 = NodePath("PlayerSceneBase/MovementSpots/Spot1")
 targetNode2 = NodePath("PlayerSceneBase/MovementSpots/Spot2")
 targetNode3 = NodePath("PlayerSceneBase/MovementSpots/Spot3")
@@ -34,7 +34,7 @@ material_override = SubResource("ShaderMaterial_7tynx")
 mesh = ExtResource("2_xwofr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(36.237, 0, 0, 0, 13.6328, 0, 0, 0, 14.5543, 0, 0, 0)
+transform = Transform3D(36.237, 0, 0, 0, 13.6328, 0, 0, 0, 14.5543, 2.29439, 0.212596, -0.767046)
 shape = SubResource("BoxShape3D_cvt0t")
 
 [node name="PlayerSceneBase" type="Node" parent="."]
