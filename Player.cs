@@ -51,8 +51,6 @@ public partial class Player : CharacterBody3D
 		healthLabel.Text = "Health: " + currentHealth;
 		if (currentHealth <= 0)
 		{
-			ScoreRepository scoreRepository = new ScoreRepository();
-			scoreRepository.SaveScore(new PlayerScore(currentScore, "Player 1"));
 			CurrentPlayerScoreSingleton.Instance.CurrentScore = currentScore;
 			GetTree().ChangeSceneToFile("res://scenes/End_Game_Score_Scene.tscn");
 		}
