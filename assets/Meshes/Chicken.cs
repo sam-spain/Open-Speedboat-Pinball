@@ -5,7 +5,7 @@ public partial class Chicken : CharacterBody3D
 {
 
 	[Export]
-	public int Speed { get; set; } = 100;
+	public int Speed { get; set; } = 125;
 
 
 	// Called when the node enters the scene tree for the first time.

@@ -8,7 +8,7 @@ public partial class ObstacleSpawner : Node3D
 	private PackedScene chickenScene = GD.Load<PackedScene>("res://chicken.tscn");
 
 	[Export]
-	public float spawnInterval = 1.0f;
+	public float spawnInterval = 0.25f;
 
 	RandomNumberGenerator rng = new RandomNumberGenerator();
 
@@ -25,7 +25,7 @@ public partial class ObstacleSpawner : Node3D
 		spawnInterval -= (float)delta;
 		if(spawnInterval <= 0) {
 			SpawnChicken();
-			spawnInterval = rng.RandfRange(0.1f, 3.0f);
+			spawnInterval = rng.RandfRange(0.085f, 2.5f);
 		}	
 	}
 
