@@ -5,7 +5,24 @@ public partial class Player : CharacterBody3D
 {
 	// How fast the player moves in meters per second.
 	[Export]
-	public int Speed { get; set; } = 100;
+	public int Speed { get; set; } = 125;
+
+	/**
+	* The cooldown time between hits, in seconds.
+	* This is used to preven the player from getting hit by multiple obstacles at once.
+	*/
+	[Export]
+	public float hitCooldown = 0.55f;
+
+	[Export]
+	public StandardMaterial3D normalMaterial;
+
+	[Export]
+	public StandardMaterial3D hitMaterial;
+
+	[Export]
+	public MeshInstance3D playerMesh;
+
 	// The downward acceleration when in the air, in meters per second squared.
 	[Export]
 	public int FallAcceleration { get; set; } = 150;
@@ -39,6 +56,8 @@ public partial class Player : CharacterBody3D
 
 	private Vector3 _targetVelocity = Vector3.Zero;
 
+	private float hitCooldownTimer = 0f;
+
 	public override void _Ready()
 	{
 		currentHealth = startingHealth;
@@ -47,13 +66,18 @@ public partial class Player : CharacterBody3D
 
 	public void TakeDamage(int damage)
 	{
-		currentHealth -= damage;
-		healthLabel.Text = "Health: " + currentHealth;
-		if (currentHealth <= 0)
+		if(hitCooldownTimer <= 0f)
 		{
-			CurrentPlayerScoreSingleton.Instance.CurrentScore = currentScore;
-			GetTree().ChangeSceneToFile("res://scenes/End_Game_Score_Scene.tscn");
+			currentHealth -= damage;
+			healthLabel.Text = "Health: " + currentHealth;
+			if (currentHealth <= 0)
+			{
+				CurrentPlayerScoreSingleton.Instance.CurrentScore = currentScore;
+				GetTree().ChangeSceneToFile("res://scenes/End_Game_Score_Scene.tscn");
+			}
+			hitCooldownTimer = hitCooldown;
 		}
+		
 	}
 
 	public void AddScore(int score)
@@ -66,7 +90,15 @@ public partial class Player : CharacterBody3D
 	public override void _PhysicsProcess(double delta)
 	{
 		var direction = Vector3.Zero;
-
+		if (hitCooldownTimer > 0f)
+		{
+			playerMesh.MaterialOverride = hitMaterial;
+			hitCooldownTimer -= (float)delta;
+		}
+		else
+		{
+			playerMesh.MaterialOverride = normalMaterial;
+		}
 		if (Input.IsActionJustPressed("move_up"))
 		{
 			Print("Pressed Up");
