@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bp38xuo5lof0i"]
 
 [ext_resource type="PackedScene" uid="uid://dsw826drfu8ix" path="res://assets/Meshes/chicken.fbx" id="1_0ic4s"]
-[ext_resource type="Script" path="res://assets/Meshes/Chicken.cs" id="2_tgxc8"]
+[ext_resource type="Script" path="res://scripts/Chicken.cs" id="2_tgxc8"]
 [ext_resource type="Script" path="res://scripts/ChickenEnter.cs" id="2_ywht3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8ynms"]
