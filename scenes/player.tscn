@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpvd3mwiifo8g"]
 
-[ext_resource type="Script" path="res://Player.cs" id="1_3xi3w"]
+[ext_resource type="Script" path="res://scripts/Player.cs" id="1_3xi3w"]
 [ext_resource type="ArrayMesh" uid="uid://dqpho5mf4of6g" path="res://assets/Meshes/15211_Wakeboard_v1_NEW.obj" id="2_xwofr"]
 [ext_resource type="Material" uid="uid://by2r11e3ohwr1" path="res://assets/Materials/orange_boat_material.tres" id="3_1n27m"]
 [ext_resource type="Material" uid="uid://yx8eohilkfs4" path="res://assets/Materials/hit_boat_material.tres" id="3_pfrxj"]

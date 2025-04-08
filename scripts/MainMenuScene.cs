@@ -14,7 +14,7 @@ public partial class MainMenuScene : Control
 
 	private void _OnStartButtonPressed()
 	{
-		GetTree().ChangeSceneToFile("res://ground.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/ground.tscn");
 	}
 
 	private void _OnHighScoresButtonPressed()

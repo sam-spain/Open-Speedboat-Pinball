@@ -5,7 +5,7 @@ using static Godot.GD;
 public partial class ObstacleSpawner : Node3D
 {
 	
-	private PackedScene chickenScene = GD.Load<PackedScene>("res://chicken.tscn");
+	private PackedScene chickenScene = GD.Load<PackedScene>("res://scenes/chicken.tscn");
 
 	[Export]
 	public float spawnInterval = 0.25f;
