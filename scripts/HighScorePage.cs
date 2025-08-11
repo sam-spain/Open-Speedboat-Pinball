@@ -28,7 +28,8 @@ public partial class HighScorePage : Node
 	{
 	}
 
-	private void clearScoreButtonPressed() {
+	private void clearScoreButtonPressed()
+	{
 		GD.Print("Clear scores button pressed");
 		// Clear the scores from the file
 		ScoreRepository scoreRepository = new ScoreRepository();
