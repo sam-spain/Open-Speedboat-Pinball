@@ -72,7 +72,7 @@ public class ScoreRepository
 		try
 		{
 			using Godot.FileAccess file = Godot.FileAccess.Open(savePath, Godot.FileAccess.ModeFlags.Write);
-			file.StoreLine(""); // Clear the file by writing an empty line
+			file.StoreString(""); // Clear the file by writing an empty string
 		}
 		catch (Exception e)
 		{
