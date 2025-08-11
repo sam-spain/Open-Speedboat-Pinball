@@ -36,3 +36,11 @@ offset_right = 41.0
 offset_bottom = 34.0
 scale = Vector2(10, 10)
 text = "Back"
+
+[node name="Clear Scores Button" type="Button" parent="."]
+layout_mode = 1
+offset_top = 350.0
+offset_right = 103.0
+offset_bottom = 381.0
+scale = Vector2(10, 10)
+text = "Clear Scores"

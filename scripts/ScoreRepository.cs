@@ -64,4 +64,19 @@ public class ScoreRepository
 		}
 		return playerScores;
 	}
+
+	public void ClearScores()
+	{
+		GD.Print("Clearing scores...");
+		string savePath = "user://SaveData";
+		try
+		{
+			using Godot.FileAccess file = Godot.FileAccess.Open(savePath, Godot.FileAccess.ModeFlags.Write);
+			file.StoreLine(""); // Clear the file by writing an empty line
+		}
+		catch (Exception e)
+		{
+			GD.PrintErr("Failed to clear scores: " + e.Message);
+		}
+	}
 }
