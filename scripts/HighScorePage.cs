@@ -18,17 +18,23 @@ public partial class HighScorePage : Node
 
 		Button backButton = GetNode<Button>("Back Button");
 		backButton.Pressed += _OnBackButtonPressed;
-		LineEdit nameInput = GetNode<LineEdit>("Name Input");
-		Button saveButton = GetNode<Button>("Save Score Button");
-		saveButton.Pressed += OnSaveButtonPressed;
-
-
+		Button clearScoresButton = GetNode<Button>("Clear Scores Button");
+		clearScoresButton.Pressed += clearScoreButtonPressed;
 		displayHighScores();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+	}
+
+	private void clearScoreButtonPressed()
+	{
+		GD.Print("Clear scores button pressed");
+		// Clear the scores from the file
+		ScoreRepository scoreRepository = new ScoreRepository();
+		scoreRepository.ClearScores();
+		displayHighScores();
 	}
 
 	private void _OnBackButtonPressed()
