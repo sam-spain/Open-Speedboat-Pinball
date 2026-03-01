@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsjf484mgopk4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rw1e2"]
+font_size = 50
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Inital Spawn Frequency Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 56.0
+offset_right = 576.0
+offset_bottom = 125.0
+text = "Initial Spawn Frequency"
+label_settings = SubResource("LabelSettings_rw1e2")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 61.0
+offset_right = 823.0
+offset_bottom = 136.0
+theme_override_font_sizes/font_size = 45
+placeholder_text = "10"
+expand_to_text_length = true
