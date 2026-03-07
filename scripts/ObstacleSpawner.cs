@@ -34,13 +34,15 @@ public partial class ObstacleSpawner : Node3D
 	{
 		speedIncreaseTimer += (float)delta;
 		if(speedIncreaseTimer >= speedIncreaseInterval) {
-			GD.Print("Increasing speed and decreasing spawn interval");
 			speedIncreaseTimer = 0f;
 			speedIncreaseAmount += speedIncreaseAmountOnInterval;
 			spawnIntervalMax -= spawnIntervalDecrement;
+			
 			if(spawnIntervalMax < spawnIntervalMin) {
+				GD.Print("Spawn interval max has reached the minimum limit. No further decrease will occur.");
 				spawnIntervalMax = spawnIntervalMin;
 			}
+			GD.Print("Increasing speed to " + speedIncreaseAmount + " and decreasing spawn interval to " + spawnIntervalMax);
 		}
 		spawnInterval -= (float)delta;
 		if(spawnInterval <= 0) {
