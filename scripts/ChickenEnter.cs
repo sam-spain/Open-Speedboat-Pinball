@@ -11,13 +11,11 @@ public partial class ChickenEnter : Area3D
 
 	private void _OnBodyEntered(Node3D body)
 	{
-		GD.Print("Chicken " + Name + " hit " + body.Name);
-		Player playerScript = body as Player;
-		if (playerScript != null)
+		if (body is Player player)
 		{
-			playerScript.TakeDamage(10);
+			player.TakeDamage(10);
 		}
+		GD.Print($"Chicken {Name} hit {body.Name}");
 		QueueFree();
-		// Something hit me
 	}
 }
